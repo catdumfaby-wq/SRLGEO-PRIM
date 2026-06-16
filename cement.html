@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -997,28 +997,48 @@
                   id="form2318958873"
                   name="form2318958873"
                   role="form"
-                  action=""
+                  action="https://formsubmit.co/el/lufeti"
                   method="POST"
                   data-formactiontype="0"
                   data-inputbox=".t-input-group"
                   class="t-form js-form-proccess t-form_inputs-total_3"
                   data-formsended-callback="t706_onSuccessCallback"
                 >
-                  <!-- NO ONE SERVICES CONNECTED -->
+                  <input type="hidden" name="_allow_origin" value="*" />
+                  <!-- FormSubmit Configuration -->
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="📦 Comandă nouă de materiale!"
+                  />
+
+                  <!-- Hidden fields for cart data -->
                   <input
                     type="hidden"
                     name="tildaspec-formname"
                     tabindex="-1"
                     value="Cart"
                   />
-                  <!-- @classes t-title t-text t-btn -->
+                  <input
+                    type="hidden"
+                    name="Produse"
+                    id="cartProducts"
+                    value=""
+                  />
+                  <input type="hidden" name="Total" id="cartTotal" value="" />
+
+                  <!-- Success message -->
                   <div
                     class="js-successbox t-form__successbox t-text t-text_md"
                     aria-live="polite"
                     style="display: none"
-                    data-success-message="Datele au fost trimise cu succes."
+                    data-success-message="✅ Comanda a fost trimisă cu succes! Vom reveni în curând."
                   ></div>
+
                   <div class="t-form__inputsbox t-form__inputsbox_inrow">
+                    <!-- Name Field -->
                     <div
                       class="t-input-group t-input-group_nm"
                       data-input-lid="8311158466360"
@@ -1031,15 +1051,16 @@
                         id="field-title_8311158466360"
                         data-redactor-toolbar="no"
                         field="li_title__8311158466360"
-                        >Your Name</label
+                        >Numele complet</label
                       >
                       <div class="t-input-block">
                         <input
                           type="text"
                           autocomplete="name"
-                          name="Name"
+                          name="Nume"
                           id="input_8311158466360"
                           class="t-input js-tilda-rule"
+                          placeholder="Ex: Ion Popescu"
                           value=""
                           data-tilda-req="1"
                           aria-required="true"
@@ -1054,6 +1075,8 @@
                         id="error_8311158466360"
                       ></div>
                     </div>
+
+                    <!-- Email Field -->
                     <div
                       class="t-input-group t-input-group_em"
                       data-input-lid="8311158466361"
@@ -1066,7 +1089,7 @@
                         id="field-title_8311158466361"
                         data-redactor-toolbar="no"
                         field="li_title__8311158466361"
-                        >Your Email</label
+                        >Adresa de email</label
                       >
                       <div class="t-input-block">
                         <input
@@ -1075,6 +1098,7 @@
                           name="Email"
                           id="input_8311158466361"
                           class="t-input js-tilda-rule"
+                          placeholder="exemplu@email.com"
                           value=""
                           data-tilda-req="1"
                           aria-required="true"
@@ -1089,6 +1113,8 @@
                         id="error_8311158466361"
                       ></div>
                     </div>
+
+                    <!-- Phone Field -->
                     <div
                       class="t-input-group t-input-group_ph"
                       data-input-lid="8311158466362"
@@ -1102,20 +1128,20 @@
                         id="field-title_8311158466362"
                         data-redactor-toolbar="no"
                         field="li_title__8311158466362"
-                        >Your Phone</label
+                        >Număr de telefon</label
                       >
                       <div class="t-input-block">
                         <input
                           type="tel"
                           autocomplete="tel"
-                          name="Phone"
+                          name="Telefon"
                           id="input_8311158466362"
                           data-phonemask-init="no"
                           data-phonemask-id="2318958873"
                           data-phonemask-lid="8311158466362"
                           class="t-input js-phonemask-input js-tilda-rule"
+                          placeholder="+373 68 123 456"
                           value=""
-                          placeholder="+1(000)000-0000"
                           data-tilda-req="1"
                           aria-required="true"
                           aria-describedby="error_8311158466362"
@@ -1149,6 +1175,37 @@
                         id="error_8311158466362"
                       ></div>
                     </div>
+
+                    <!-- Address Field -->
+                    <div
+                      class="t-input-group"
+                      data-input-lid="adresa"
+                      data-field-type="adr"
+                      data-field-name="Address"
+                    >
+                      <label
+                        for="input_address"
+                        class="t-input-title t-descr t-descr_md"
+                        id="field-title_adresa"
+                        data-redactor-toolbar="no"
+                        field="li_title__adresa"
+                        >Adresa de livrare</label
+                      >
+                      <div class="t-input-block">
+                        <input
+                          type="text"
+                          autocomplete="address"
+                          name="Adresa"
+                          id="input_address"
+                          class="t-input"
+                          placeholder="Str. Constructorilor, nr. 10, Chișinău"
+                          value=""
+                          style="color: #000000; border: 1px solid #000000"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Error Box -->
                     <div class="t-form__errorbox-middle">
                       <!--noindex-->
                       <div
@@ -1187,12 +1244,14 @@
                       </div>
                       <!--/noindex-->
                     </div>
+
+                    <!-- Submit Button -->
                     <div class="t-form__submit">
                       <button
                         class="t-submit t-btnflex t-btnflex_type_submit t-btnflex_md"
                         type="submit"
                       >
-                        <span class="t-btnflex__text">Comandă</span>
+                        <span class="t-btnflex__text">📦 Comandă</span>
                         <style>
                           #rec2318958873 .t-btnflex.t-btnflex_type_submit {
                             color: #ffffff;
@@ -1210,6 +1269,7 @@
                       </button>
                     </div>
                   </div>
+
                   <div class="t-form__errorbox-bottom">
                     <!--noindex-->
                     <div
@@ -1249,6 +1309,7 @@
                     <!--/noindex-->
                   </div>
                 </form>
+
                 <style>
                   #rec2318958873 input::-webkit-input-placeholder {
                     color: #000000;
@@ -1292,5 +1353,88 @@
         <!--/tcart-->
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Funcție pentru a prelua produsele din coșul Tilda
+        function getCartProducts() {
+          let products = [];
+          let total = 0;
+
+          // Caută produsele din coș
+          const cartItems = document.querySelectorAll(".t706__cartwin-product");
+
+          cartItems.forEach(function (item) {
+            const nameEl = item.querySelector(".t706__cartwin-product-title");
+            const priceEl = item.querySelector(".t706__cartwin-product-price");
+            const qtyEl = item.querySelector(
+              ".t706__cartwin-product-quantity-value",
+            );
+
+            if (nameEl && priceEl && qtyEl) {
+              const name = nameEl.textContent.trim();
+              const priceText = priceEl.textContent.replace(/[^0-9.]/g, "");
+              const price = parseFloat(priceText) || 0;
+              const qty = parseInt(qtyEl.textContent) || 0;
+              const subtotal = price * qty;
+
+              products.push({
+                name: name,
+                quantity: qty,
+                price: price,
+                subtotal: subtotal,
+              });
+
+              total += subtotal;
+            }
+          });
+
+          return { products, total };
+        }
+
+        // Ascultă evenimentul de submit
+        const form = document.getElementById("form2318958873");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            // Preia produsele din coș
+            const cartData = getCartProducts();
+
+            // Construiește textul cu produsele
+            let productText = "";
+            if (cartData.products.length === 0) {
+              productText = "Coșul este gol!";
+            } else {
+              cartData.products.forEach(function (p) {
+                productText += `${p.name}\n`;
+                productText += `  Cantitate: ${p.quantity} buc\n`;
+                productText += `  Preț unitar: ${p.price} MDL\n`;
+                productText += `  Subtotal: ${p.subtotal} MDL\n\n`;
+              });
+            }
+
+            // Setează valorile în câmpurile ascunse
+            const productsInput = document.getElementById("cartProducts");
+            const totalInput = document.getElementById("cartTotal");
+
+            if (productsInput) {
+              productsInput.value = productText;
+            }
+
+            if (totalInput) {
+              totalInput.value = cartData.total + " MDL";
+            }
+
+            // Dacă nu sunt produse, afișează un mesaj și oprește submit-ul
+            if (cartData.products.length === 0) {
+              e.preventDefault();
+              alert("⚠️ Coșul este gol! Adaugă produse înainte de a comanda.");
+              return false;
+            }
+
+            // Lasă formularul să se trimită
+            return true;
+          });
+        }
+      });
+    </script>
   </body>
 </html>
